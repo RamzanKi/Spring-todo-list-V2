@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task,number : ${tasks}">
+        <td th:text="${task.id}" />
+        <td th:text="${task.description}" th:id="'description_' + ${task.id}"/>
+        <td th:text="${task.status}" th:id="'status_' + ${task.id}"/>
+        <td>
+            <button th:id="'edit_' + ${task.id}" th:onclick="'edit_task(' + ${task.id} + ')'">Edit</button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
