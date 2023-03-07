@@ -3,3 +3,15 @@ td, th {
     border: black;
     color: black;
 }
+
+.active_page {
+    color: rgba(255, 99, 71, 0.99);
+}
+
+.button_page {
+    color: white;
+    border: 2px solid black;
+    margin: 5px;
+    padding: 20px;
+    font-size: large;
+}
